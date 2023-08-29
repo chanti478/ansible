@@ -3,6 +3,6 @@
   hosts: mongodb
   # this is list of tasks/modules/collections
   tasks:
-    - name: ping the server
+  - name: ping the server
     # this is the map
     ansible.builtin.ping:
