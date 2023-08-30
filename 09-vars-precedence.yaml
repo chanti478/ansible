@@ -14,3 +14,12 @@
       NAME: narasimha-task
     ansible.builtin.debug:
       msg: "Trainer name is: {{NAME}}"
+
+      # 1St  is command line
+      # 2nd preference is level
+      # 3rd preference is vars_files
+      # 4th preferance is prompt
+      # 5th preferance is play
+      # 6th preferance is inventory
+      #  7th preferance is roles
+      
