@@ -9,7 +9,17 @@
     ansible.builtin.debug: id roboshop
     register: output # output is variable name
     ignore_errors: true
+
   - name: print the command output
     ansible.builtin.debug:
       msg: "output is: {{output}}"
+  - name: print exit status
+    ansible.builtin.debug:
+      msg: "{{output.rc}}"
+  - name: create user roboshop
+    become: yes # we need sudo access for this task only
+    ansible.builtin.debug:
+      name: roboshop
+    when: output.rc !=0
+
 
